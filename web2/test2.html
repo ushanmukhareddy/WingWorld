@@ -226,26 +226,20 @@
     <script>
         // JavaScript function to show a specific tab
         function showTab(tabId) {
-            // Hide all tab content
             var tabContents = document.querySelectorAll('.tab-content');
             tabContents.forEach(function(tabContent) {
                 tabContent.classList.remove('active');
             });
 
-            // Deactivate all tab items
             var tabItems = document.querySelectorAll('.tab-item');
             tabItems.forEach(function(tabItem) {
                 tabItem.classList.remove('active-tab-item');
             });
-0
-            // Show the selected tab content
-            document.getElementById(tabId).classList.add('active');
 
-            // Activate the corresponding tab item
+            document.getElementById(tabId).classList.add('active');
             document.querySelector('[onclick="showTab(\'' + tabId + '\')"]').classList.add('active-tab-item');
         }
 
-        // Show the initial tab
         showTab('Bomber');
     </script>
 </body>
